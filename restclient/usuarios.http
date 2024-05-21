@@ -1,0 +1,44 @@
+GET http://localhost:3000/api/usuarios
+
+###
+
+GET http://localhost:3000/api/usuarios/gvera@uv.mx
+
+###
+
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+    "email": "prueba@uv.mx",
+    "password": "patito",
+    "nombre": "Un nuevo usuario pato",
+    "rol": "Administrador"
+}
+
+###
+
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZ3ZlcmFAdXYubXgiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9naXZlbm5hbWUiOiJHdWlsbGVybW8gVmVyYSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IkFkbWluaXN0cmFkb3IiLCJpc3MiOiJTZXJ2aWRvckZlaUpXVCIsImF1ZCI6IkNsaWVudGVzRmVpSldUIiwiaWF0IjoxNzE2Mjc0NDUyLCJleHAiOjE3MTYyNzU2NTJ9.WJPb6WUfAlNazCquV3sgSxyG73HJFRTWobIeJa0uKmc
+
+{
+    "email": "tlachyislucky@gmail.com",
+    "password": "Tlach-E 421",
+    "nombre": "Daniel Mongeote Tlachy",
+    "rol": "Usuario"
+}
+
+###
+
+PUT http://localhost:3000/api/usuarios/prueba@uv.mx
+Content-Type: application/json
+
+{
+    "email": "prueba@uv.mx",
+    "nombre": "Usuario pato editado",
+    "rol": "Usuario"
+}
+
+###
+DELETE http://localhost:3000/api/usuarios/gvera@uv.mx
